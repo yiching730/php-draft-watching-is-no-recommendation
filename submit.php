@@ -19,8 +19,6 @@ try {
     die("Error!: " . $e->getMessage() . "<br/>");
 }
 
-
-
 echo 'Hello ' . $_POST['name'];
 echo 'Hello ' . $_POST['username'];
 echo 'Hello ' . $_POST['password'];
@@ -40,3 +38,4 @@ echo $sql;
 
 
 $dbh->query($sql);
+

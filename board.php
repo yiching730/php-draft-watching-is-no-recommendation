@@ -20,12 +20,14 @@ try {
     die("Error!: " . $e->getMessage() . "<br/>");
 }
 
-$userId = $_SESSION['user']['id'];
+$userId = $_SESSION['user']['id'];  //user裡的id
 $title2 = $_POST['title2'];
 $message2 = $_POST['message2'];
 
 $sql = "INSERT INTO `board`(`user_id`, `title`, `message`) VALUES ('$userId','$title2','$message2')";
 
-echo $sql;
+echo $sql;  //印出給我看
 
-$dbh->query($sql);
+$dbh->query($sql); //執行sql
+header("Location: messageboard.php");
+exit();
